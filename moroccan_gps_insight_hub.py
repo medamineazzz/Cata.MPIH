@@ -4,6 +4,9 @@ import pandas as pd
 import plotly.express as px
 import openai
 import os
+import os
+st.sidebar.info(f"Key detected: {'✅' if os.getenv('OPENAI_API_KEY') else '❌'}")
+
 
 # App Config
 st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
