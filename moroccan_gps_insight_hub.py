@@ -10,8 +10,6 @@ st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
 st.sidebar.info(f"Key detected: {'✅' if os.getenv('OPENAI_API_KEY') else '❌'}")
 st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
 
-
-
 # App Config
 st.title("🇲🇦 Moroccan GPS Insight Hub")
 st.markdown("Upload your Catapult GPS data, select any two metrics, and get AI-generated performance insights.")
