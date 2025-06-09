@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import openai
 import os
 import os
 
@@ -39,25 +38,3 @@ if uploaded_file:
     fig = px.scatter(df, x=x_axis, y=y_axis, hover_name='Name', color='Equipe', title=f"{y_axis} vs {x_axis}")
     st.plotly_chart(fig, use_container_width=True)
 
-    # AI Interpretation
-    st.subheader("🤖 AI Insight")
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-
-    if openai.api_key:
-        prompt = f"""
-        Analyze the relationship between '{x_axis}' and '{y_axis}' from GPS data in a football context. 
-        Mention what it means if values are high/low, suggest performance implications, and give possible reasons for outliers.
-        """
-
-        try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4",
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=200
-            )
-            insight = response.choices[0].message.content
-            st.markdown(insight)
-        except Exception as e:
-            st.warning("Could not load AI interpretation. Check API key or try again later.")
-    else:
-        st.info("AI insight requires an OpenAI API Key. Set it as 'OPENAI_API_KEY' in environment variables.")
