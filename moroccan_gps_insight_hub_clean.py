@@ -12,7 +12,7 @@ st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
 st.image("https://i.imgur.com/XRWKn7V.png", width=100)
 
 st.markdown("""
-    <h1 style='text-align: center; color: #d32f2f;'>🇲🇦 Moroccan GPS Insight Hub</h1>
+    <h1 style='text-align: center; color: #d32f2f;'> Moroccan GPS Insight Hub</h1>
     <h4 style='text-align: center; color: #444;'>Upload Catapult GPS data and get clear performance visuals</h4>
     <hr>
 """, unsafe_allow_html=True)
