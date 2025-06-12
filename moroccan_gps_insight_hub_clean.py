@@ -14,7 +14,7 @@ st.image("https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%
 
 st.markdown("""
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Catapult_Sports_logo.png" width="120"/>
+        <img src="https://ams.catapultsports.com/hc/theming_assets/01HZH068BKDCVXFNAEF6XZX86Q" width="120"/>
         
         <h2 style="flex-grow: 1; text-align: center; color: #d32f2f; margin: 0;">
             Moroccan GPS Insight Hub
