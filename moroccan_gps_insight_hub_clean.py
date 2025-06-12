@@ -19,7 +19,7 @@ st.markdown("""
     <h4 style='text-align: center; color: #444;'>Upload Catapult GPS data and get clear performance visuals</h4>
     <hr>
 """, unsafe_allow_html=True)
-st.markdown("Upload your Catapult GPS data, select any two metrics.")
+st.markdown("Upload your Catapult GPS data "csv/xls", select two metrics and get your insights.")
 
 # Upload
 uploaded_file = st.file_uploader("Upload CSV File", type=["csv"]) 
