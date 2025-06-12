@@ -41,15 +41,28 @@ if uploaded_file:
         y_axis = st.selectbox("Y-axis", numeric_cols)
 
     # Generate Scatter Plot
-    fig = hover_col = 'Name' if 'Name' in df.columns else None
-color_col = 'Equipe' if 'Equipe' in df.columns else None
+  if uploaded_file:
+    df = pd.read_csv(uploaded_file)
 
-fig = px.scatter(
-    df,
-    x=x_axis,
-    y=y_axis,
-    hover_name=hover_col,
-    color=color_col,
-    title=f"{y_axis} vs {x_axis}")
+    # Check optional columns only after df is loaded
+    hover_col = 'Name' if 'Name' in df.columns else None
+    color_col = 'Equipe' if 'Equipe' in df.columns else None
+
+    numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist()
+
+    x_axis = st.selectbox("X-axis", numeric_cols)
+    y_axis = st.selectbox("Y-axis", numeric_cols)
+
+    fig = px.scatter(
+        df,
+        x=x_axis,
+        y=y_axis,
+        hover_name=hover_col,
+        color=color_col,
+        title=f"{y_axis} vs {x_axis}"
+    )
+
+    st.plotly_chart(fig)
+
 
 
