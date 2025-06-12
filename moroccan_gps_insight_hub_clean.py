@@ -29,10 +29,9 @@ if uploaded_file:
     st.markdown("<h3 style='color:#2e7d32;'>📄 Data Preview</h3>", unsafe_allow_html=True)
     st.dataframe(df.head())
 
-    # Numeric columns only for scatter plot
+    # Detect numeric columns
     numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist()
 
-    # Dropdowns to select X and Y
     st.markdown("<h3 style='color:#2e7d32;'>📊 Select Metrics</h3>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
@@ -40,19 +39,11 @@ if uploaded_file:
     with col2:
         y_axis = st.selectbox("Y-axis", numeric_cols)
 
-    # Generate Scatter Plot
-  if uploaded_file:
-    df = pd.read_csv(uploaded_file)
-
-    # Check optional columns only after df is loaded
+    # Check if optional columns exist
     hover_col = 'Name' if 'Name' in df.columns else None
     color_col = 'Equipe' if 'Equipe' in df.columns else None
 
-    numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns.tolist()
-
-    x_axis = st.selectbox("X-axis", numeric_cols)
-    y_axis = st.selectbox("Y-axis", numeric_cols)
-
+    # Plot
     fig = px.scatter(
         df,
         x=x_axis,
@@ -61,8 +52,4 @@ if uploaded_file:
         color=color_col,
         title=f"{y_axis} vs {x_axis}"
     )
-
-    st.plotly_chart(fig)
-
-
-
+    st.plotly_chart(fig, use_container_width=True)
