@@ -12,12 +12,6 @@ st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
 st.image("https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png",
     width=120)
 
-# Moroccan FA Logo + App Title
-st.image(
-    "https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png",
-    width=120
-)
-
 st.markdown("Upload your Catapult GPS data, select two metrics and get your insights.")
 
 # Upload
