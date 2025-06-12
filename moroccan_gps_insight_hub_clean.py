@@ -25,6 +25,9 @@ st.markdown("""
     <hr style="margin-top: 10px;">
 """, unsafe_allow_html=True)
 
+st.image("CAT_horizontal_logo_lockup_white.png",
+    width=120)
+
 st.markdown("Upload your Catapult GPS data, select two metrics and get your insights.")
 
 # Upload
