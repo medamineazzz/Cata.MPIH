@@ -9,10 +9,8 @@ st.set_page_config(page_title="Moroccan GPS Insight Hub", layout="centered")
 
 # App Config
 # Moroccan FA Logo + Custom Title
-st.image(
-    "https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png",
-    width=120
-)
+st.image("https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png",
+    width=120)
 
 st.markdown("""
     <h1 style='text-align: center; color: #d32f2f;'> Moroccan GPS Insight Hub</h1>
