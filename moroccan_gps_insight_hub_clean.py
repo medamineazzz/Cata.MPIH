@@ -13,20 +13,28 @@ st.image("https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%
     width=120)
 
 st.markdown("""
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <!-- Moroccan FA Logo -->
-        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png" width="100"/>
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <!-- FA logo on the left -->
+        <div style="flex: 1;">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png" width="90">
+        </div>
 
-        <!-- App Title -->
-        <h2 style="flex-grow: 1; text-align: center; color: #d32f2f; margin: 0;">
-            Moroccan GPS Insight Hub
-        </h2>
+        <!-- Title in the center -->
+        <div style="flex: 2; text-align: center;">
+            <h2 style="color: #d32f2f; margin-bottom: 0;">Moroccan GPS Insight Hub</h2>
+            <p style="color: #ccc; font-size: 14px; margin-top: 4px;">
+                Powered by Catapult GPS Technology
+            </p>
+        </div>
 
-        <!-- Catapult Logo -->
-        <img src="https://raw.githubusercontent.com/medamineazzz/Cata.MPIH/main/CAT_horizontal_logo_lockup_white.png" width="100"/>
+        <!-- Catapult logo on the right -->
+        <div style="flex: 1; text-align: right;">
+            <img src="https://raw.githubusercontent.com/medamineazzz/Cata.MPIH/main/CAT_horizontal_logo_lockup_white.png" width="120">
+        </div>
     </div>
     <hr style="margin-top: 10px;">
 """, unsafe_allow_html=True)
+
 
 
 st.markdown("Upload your Catapult GPS data, select two metrics and get your insights.")
