@@ -18,15 +18,6 @@ st.image(
     width=120
 )
 
-st.markdown("""
-    <h1 style='text-align: center; color: #d32f2f;'>🇲🇦 Moroccan GPS Insight Hub</h1>
-    <h4 style='text-align: center; color: #444;'>Upload Catapult GPS data and get clear performance visuals</h4>
-    <hr>
-""", unsafe_allow_html=True)
-
-
-
-
 st.markdown("Upload your Catapult GPS data, select two metrics and get your insights.")
 
 # Upload
