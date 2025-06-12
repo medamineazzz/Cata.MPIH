@@ -14,16 +14,15 @@ st.image("https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%
 
 st.markdown("""
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="CAT_horizontal_logo_lockup_white.png" width="120"/>
-        
+        <img src="https://raw.githubusercontent.com/medamineazzz/Cata.MPIH/main/CAT_horizontal_logo_lockup_white.png" width="100"/>
         <h2 style="flex-grow: 1; text-align: center; color: #d32f2f; margin: 0;">
             Moroccan GPS Insight Hub
         </h2>
-
-        <img src="CAT_horizontal_logo_lockup_white.png" width="100"/>
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/6/69/Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg/1507px-Logo_F%C3%A9d%C3%A9ration_Royale_Marocaine_Football.svg.png" width="100"/>
     </div>
     <hr style="margin-top: 10px;">
 """, unsafe_allow_html=True)
+
 
 st.markdown("Upload your Catapult GPS data, select two metrics and get your insights.")
 
