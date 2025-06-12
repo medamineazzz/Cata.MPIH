@@ -41,15 +41,15 @@ if uploaded_file:
         y_axis = st.selectbox("Y-axis", numeric_cols)
 
     # Generate Scatter Plot
-    fig = px.scatter(df, x=x_axis, y=y_axis, hover_name='Name', color='Equipe', title=f"{y_axis} vs {x_axis}")
-    st.plotly_chart(fig, use_container_width=True)
+    fig = hover_col = 'Name' if 'Name' in df.columns else None
+color_col = 'Equipe' if 'Equipe' in df.columns else None
 
-
-    st.markdown("""
-    <hr>
-    <div style='text-align: center; color: grey; font-size: 13px;'>
-        Built by Amine Azzouzi – All rights reserved © 2025
-    </div>
-""", unsafe_allow_html=True)
+fig = px.scatter(
+    df,
+    x=x_axis,
+    y=y_axis,
+    hover_name=hover_col,
+    color=color_col,
+    title=f"{y_axis} vs {x_axis}")
 
 
